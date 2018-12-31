@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<head>
+    <title>GigHub - Home</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="vue-app">
+        <div class="navbar">
+            <div v-bind:class="{ active: home}" v-on:click="setHome"><i class="fa fa-fw fa-home"></i> Home</div>
+            <div v-bind:class="{ active: searchArtist}" v-on:click="setSearchArtist"><i class="fa fa-fw fa-search"></i>
+                Search Artist</div>
+            <div v-bind:class="{ active: addArtist}" v-on:click="setAddArtist"><i class="fa fa-fw fa-user"></i> Add
+                artist</div>
+            <div v-bind:class="{ active: addGig}" v-on:click="setAddGig"><i class="fa fa-fw fa-music"></i> Add a Gig</div>
+        </div>
+
+        <div v-if="home" class="home">
+            home
+        </div>
+
+        <div v-if="searchArtist" class="search-artist">
+            search artist
+        </div>
+
+        <div v-if="addArtist" class="add-artist">
+            <form>
+                <label>Name: </label>
+                <input type="text"  name="name"/>
+                <br>
+
+                <label>Age: </label>
+                <input type="text" name="age"/>
+                <br>
+
+                <label>Instruments: </label>
+                <input type="text" name="instruments"/>
+                <br>
+
+                <textarea rows="4" cols="50" name="comment" >Artist Bio</textarea>
+            </form>
+        </div>
+
+        <div v-if="addGig" class="add-gig">
+            add gig
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
