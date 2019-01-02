@@ -1,4 +1,5 @@
 # GigHub
+An app that manages artists and upcoming gigs.
 
 # Install
 npm install
