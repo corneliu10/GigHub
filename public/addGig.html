@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<head>
+    <title>GigHub - Home</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div id="vue-app">
+        <div class="navbar">
+            <a href="./index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="./searchArtist.html"><i class="fa fa-fw fa-search"></i> Search Artist</a>
+            <a href="./addArtist.html"><i class="fa fa-fw fa-user"></i> Add artist</a>
+            <a class="active"><i class="fa fa-fw fa-music"></i> Add a Gig</a>
+        </div>
+
+        <label>Gig name: </label>
+        <input type="text" name="gig_name" id="gig_name" class="input" />
+        <br> 
+
+        <label>Location: </label>
+        <input type="text" name="gig_location" id="gig_location" class="input" />
+        <br> 
+
+        <div class="dropdown">
+            <button class="dropbtn">{{ selectedArtist.name }}</button>
+            <div class="dropdown-content">
+                <a v-for="(artist, key) in artists" v-on:click="selectedArtist.name = artist.name; selectedArtist.id = key; ">{{ artist.name }}</a>
+            </div>
+        </div>
+
+        <button v-on:click="addGig">Add gig</button>
+    </div>
+</body>
+
+</html>

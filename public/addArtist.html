@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <title>GigHub - Home</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div id="vue-app">
+        <div class="navbar">
+            <a href="./index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="./searchArtist.html"><i class="fa fa-fw fa-search"></i> Search Artist</a>
+            <a class="active"><i class="fa fa-fw fa-user"></i> Add artist</a>
+            <a href="./addGig.html"><i class="fa fa-fw fa-music"></i> Add a Gig</a>
+        </div>
+
+
+        <label>Name: </label>
+        <input type="text" name="name" id="name" class="input" />
+        <br> 
+
+        <label>Age: </label>
+        <input type="text" name="age" id="age" class ="input" />
+        <br>
+
+        <label>Instruments: </label>
+        <input type="text" name="instruments" id="instruments" class="input"/>
+        <br>
+
+        <textarea rows="4" cols="50" name="comment" id="comment" placeholder="Artist Bio"></textarea>
+        <br>
+
+        <button v-on:click="add">Add artist</button>
+    </div>
+
+</body>
+
+</html>
