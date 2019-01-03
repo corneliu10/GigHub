@@ -3,13 +3,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.navbar {
+.navbar_menu {
     width: 100%;
     background-color: #555;
     display: inline-block;
 }
 
-.navbar a {
+.navbar_menu a {
     float: left;
     padding: 12px;
     color: white;
@@ -18,8 +18,10 @@ body {
     user-select: none;
 }
 
-.navbar a:hover {
+.navbar_menu a:hover {
     background-color: #000;
+    color: white;
+    text-decoration: none;
 }
 
 .active {
@@ -29,9 +31,11 @@ body {
 .dropbtn {
     background-color: #4CAF50;
     color: white;
-    padding: 16px;
-    font-size: 16px;
-    margin: 15px;
+    padding: 8px;
+    font-size: 14px;
+    margin: 8px;
+    margin-left: 0px;
+    margin-top: 24px;
     border: none;
     cursor: pointer;
 }
